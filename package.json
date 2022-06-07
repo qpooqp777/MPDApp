@@ -4,19 +4,33 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.1",
+    "@date-io/date-fns": "^2.14.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.7.0",
+    "@mui/x-date-pickers": "^5.0.0-alpha.3",
+    "axios": "^0.27.2",
+    "cookies-next": "^2.0.4",
+    "date-fns": "^2.28.0",
     "next": "12.1.6",
+    "next-auth": "^4.3.4",
+    "qs": "^6.10.3",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "17.0.33",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
+    "@types/uuid": "^8.3.4",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
     "typescript": "4.6.4"
