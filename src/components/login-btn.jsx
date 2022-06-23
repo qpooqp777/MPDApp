@@ -1,8 +1,18 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { getSession } from "next-auth/react"
 
+import react,{useEffect} from 'react'
+
 export default  function Component() {
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
+  const getsession =  getSession()
+
+  useEffect(() => {
+    console.log('session',session);
+   
+}, [session]); //Add session state to the useEffect
+
+
 
 
   if (session) {
@@ -13,10 +23,17 @@ export default  function Component() {
       </>
     )
   }
+
+
   return (
     <>
       Not signed in <br />
+      {`status=${status}`}<br />
+      {`session=${session}`} <br />
+   {'getsession='+getsession}
       <button onClick={() => signIn()}>Sign in</button>
+
+      <button onClick={() => signOut()}>Sign out</button>
     </>
   )
 }

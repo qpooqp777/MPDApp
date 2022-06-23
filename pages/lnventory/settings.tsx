@@ -41,6 +41,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import axios from 'axios';
 
 import { actionCreators, reducer, initialState } from '../../src/components/Loading'
+import { Tune } from '@mui/icons-material';
 
 
 interface State {
@@ -331,7 +332,10 @@ const Settings: NextPage = () => {
           sx={{ m: 1, width: '25ch' }}
           variant="filled"
         >
-          <InputLabel id="demo-simple-select-label">*盤點地點(必填)</InputLabel>
+          <InputLabel
+                    error={values.place != ''?false:true}
+
+          id="demo-simple-select-label">*盤點地點(必填)</InputLabel>
           <Select
       defaultValue=''
             labelId="demo-simple-select-label"
@@ -354,7 +358,9 @@ const Settings: NextPage = () => {
           sx={{ m: 1, width: '25ch' }}
           variant="filled"
         >
-          <InputLabel id="demo-simple-select-label">*盤點館別(必填)</InputLabel>
+          <InputLabel 
+          error={values.gallery != ''?false:true}
+          id="demo-simple-select-label">*盤點館別(必填)</InputLabel>
           <Select
      defaultValue=''
 

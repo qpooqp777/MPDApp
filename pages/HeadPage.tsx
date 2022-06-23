@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import LoginBtn from '../src/components/login-btn'
 
 
 
@@ -16,7 +15,7 @@ const HeadPage =  (props:{title:string}) =>  {
     <link rel="icon" href="/static/images/favicon.ico" />
   </Head>
 
-  <LoginBtn />
+ 
 
 </>
   );
