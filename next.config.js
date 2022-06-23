@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
   reactStrictMode: true,
-  distDir: 'build',
+  // trailingSlash: true,
+  // distDir: 'build',
 //   serverRuntimeConfig: {
 //     PROJECT_ROOT: __dirname
 // }
