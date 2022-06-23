@@ -31,14 +31,14 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
 
   return await NextAuth(req, res, {
     providers: [
-      LineProvider({
-        clientId: process.env.LINE_CLINET_ID,
-        clientSecret: process.env.LINE_CLINET_SECRET,
-      }),
-      GoogleProvider({
-        clientId: process.env.GOOGLE_ID,
-        clientSecret: process.env.GOOGLE_SECRET,
-      }),
+      // LineProvider({
+      //   clientId: process.env.LINE_CLINET_ID,
+      //   clientSecret: process.env.LINE_CLINET_SECRET,
+      // }),
+      // GoogleProvider({
+      //   clientId: process.env.GOOGLE_ID,
+      //   clientSecret: process.env.GOOGLE_SECRET,
+      // }),
       // ...add more providers here
     ],
     secret: process.env.NEXTAUTH_SECRET,
