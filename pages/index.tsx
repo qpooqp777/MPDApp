@@ -34,9 +34,8 @@ import { getCookie } from 'cookies-next';
 
 import CircularProgress from '@mui/material/CircularProgress';
 
-import { useSession } from "next-auth/react"
 
-import { FaLine } from 'react-icons/fa';
+
 
 
 var qs = require('qs');
@@ -73,7 +72,6 @@ const Index: NextPage = () => {
   const [loadShow,setLoadShow] = useState(false);
 
   
-  const { data: session, status } = useSession()
 
   const handleChange =
   (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
